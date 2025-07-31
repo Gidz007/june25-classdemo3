@@ -1,0 +1,14 @@
+name: pipeline
+
+on: [pull_request]
+
+jobs: 
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # checkout code means -- getting code from a repository.
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: setup node js  
